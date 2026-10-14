@@ -816,6 +816,29 @@ img{ display:block; max-width:100%; }
   #gate{ transition: none; }
   #site-content{ transition: none; }
 }
+
+/* ---- Seed round v2 ---- */
+.seed-terms{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--gold-thread);border-bottom:1px solid rgba(252,248,245,.14);margin-bottom:88px}
+.seed-term{padding:36px 32px;border-left:1px solid rgba(252,248,245,.14);text-align:center}
+.seed-term:first-child{border-left:none}
+.seed-term.seed-hl{background:rgba(176,138,76,.08)}
+.seed-k{font-family:'Archivo',sans-serif;font-weight:700;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--limestone)}
+.seed-v{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(44px,5vw,64px);line-height:1.05;margin:14px 0 8px;color:var(--bone);font-variant-numeric:lining-nums}
+.seed-hl .seed-v{color:var(--gold-thread)}
+.seed-s{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:var(--bone);opacity:.6}
+.val-three-col{display:grid;grid-template-columns:repeat(3,1fr);gap:48px}
+.val-three-col .ledger-row{grid-template-columns:1fr auto;gap:16px;padding:20px 0}
+.val-three-col .ledger-figure{font-size:28px}
+.ledger-note{display:block;font-style:italic;font-weight:400;font-size:15px;opacity:.65;margin-top:2px}
+.ledger-mult .ledger-figure{color:var(--gold-thread);font-size:34px}
+.val-method{max-width:46em;margin:80px auto 0;text-align:center}
+.val-method p{font-family:'Cormorant Garamond',serif;font-size:21px;line-height:1.55;color:var(--bone);opacity:.82;margin-top:14px}
+@media (max-width: 980px){
+  .seed-terms{grid-template-columns:1fr;margin-bottom:64px}
+  .seed-term{border-left:none;border-top:1px solid rgba(252,248,245,.14);padding:28px 16px}
+  .seed-term:first-child{border-top:none}
+  .val-three-col{grid-template-columns:1fr;gap:56px}
+}
 </style>
 </head>
 <body>
@@ -935,36 +958,50 @@ img{ display:block; max-width:100%; }
 <section class="valuation">
   <div class="wrap">
     <div class="val-head reveal">
-      <div class="label">The House of Longevity Outlook</div>
-      <h2 class="serif-display">The business, in context.</h2>
-      <div class="note">Illustrative company context, modelled on the current House of Longevity financial plan. Not a guarantee and not financial advice.</div>
+      <div class="label">The House of Longevity Seed Round</div>
+      <h2 class="serif-display">Priced on our Base. <em>Built for our Target.</em></h2>
+      <div class="note">The round is priced on our Base of 6,000 active patients. Our Target is 10,000. Every value below uses one method, applied the same way at every milestone.</div>
     </div>
 
-    <div class="val-two-col" style="grid-template-columns:1fr">
-      <div class="val-panel reveal reveal-delay-1">
-        <div class="val-panel-label">The Business</div>
-        <div class="val-panel-sub">Illustrative company valuation context</div>
-        <div class="ledger-row">
-          <div class="ledger-marker">Today &middot; indicative value, pre-money (based on 6,000 patients)</div>
-          <div class="ledger-figure">$21m</div>
-        </div>
-        <div class="ledger-row">
-          <div class="ledger-marker">Year 3 &middot; revenue and earnings multiples (based on 6,000 patients)</div>
-          <div class="ledger-figure">$65m</div>
-        </div>
-        <div class="ledger-row">
-          <div class="ledger-marker">Year 5 &middot; revenue and earnings multiples (based on 6,000 patients)</div>
-          <div class="ledger-figure">$75m</div>
-        </div>
-        <div class="ledger-row">
-          <div class="ledger-marker">Year 5 &middot; data platform, modelled on revenue (based on 25,000 patients)</div>
-          <div class="ledger-figure">$1.4b</div>
-        </div>
+    <div class="seed-terms reveal reveal-delay-1">
+      <div class="seed-term"><div class="seed-k">Fair value today</div><div class="seed-v">$29.5m</div><div class="seed-s">Base, 6,000 active patients</div></div>
+      <div class="seed-term seed-hl"><div class="seed-k">Seed price, pre-money</div><div class="seed-v">$23.6m</div><div class="seed-s">A 20% discount to fair value</div></div>
+      <div class="seed-term"><div class="seed-k">Raise &middot; post-money</div><div class="seed-v">$25.6m</div><div class="seed-s">$2.0m raise</div></div>
+    </div>
+
+    <div class="val-three-col">
+      <div class="val-panel reveal">
+        <div class="val-panel-label">Base</div>
+        <div class="val-panel-sub">6,000 active patients</div>
+        <div class="ledger-row"><div class="ledger-marker">Fair value today<span class="ledger-note">You pay $23.6m</span></div><div class="ledger-figure">$29.5m</div></div>
+        <div class="ledger-row"><div class="ledger-marker">Year 3 &middot; 2029</div><div class="ledger-figure">$73.3m</div></div>
+        <div class="ledger-row"><div class="ledger-marker">Year 5 &middot; 2031</div><div class="ledger-figure">$90.0m</div></div>
+        <div class="ledger-row ledger-mult"><div class="ledger-marker">By Year 5, on the seed post-money<span class="ledger-note">29% a year</span></div><div class="ledger-figure">3.5&times;</div></div>
       </div>
-
+      <div class="val-panel reveal">
+        <div class="val-panel-label">Target</div>
+        <div class="val-panel-sub">10,000 active patients</div>
+        <div class="ledger-row"><div class="ledger-marker">Fair value today<span class="ledger-note">2.1&times; the seed price</span></div><div class="ledger-figure">$48.9m</div></div>
+        <div class="ledger-row"><div class="ledger-marker">Year 3 &middot; 2029</div><div class="ledger-figure">$118.1m</div></div>
+        <div class="ledger-row"><div class="ledger-marker">Year 5 &middot; 2031</div><div class="ledger-figure">$149.3m</div></div>
+        <div class="ledger-row ledger-mult"><div class="ledger-marker">By Year 5, on the seed post-money<span class="ledger-note">42% a year</span></div><div class="ledger-figure">5.8&times;</div></div>
+      </div>
+      <div class="val-panel reveal">
+        <div class="val-panel-label">Stretch</div>
+        <div class="val-panel-sub">25,000 active patients</div>
+        <div class="ledger-row"><div class="ledger-marker">Fair value today<span class="ledger-note">5.9&times; the seed price</span></div><div class="ledger-figure">$140.0m</div></div>
+        <div class="ledger-row"><div class="ledger-marker">Year 3 &middot; 2029</div><div class="ledger-figure">$335.7m</div></div>
+        <div class="ledger-row"><div class="ledger-marker">Year 5 &middot; 2031</div><div class="ledger-figure">$427.2m</div></div>
+        <div class="ledger-row ledger-mult"><div class="ledger-marker">By Year 5, on the seed post-money<span class="ledger-note">76% a year</span></div><div class="ledger-figure">16.7&times;</div></div>
+      </div>
     </div>
 
-    <div class="val-footnote reveal reveal-delay-3">Illustrative company valuation context based on the current House of Longevity financial plan.</div>
+    <div class="val-method reveal">
+      <div class="val-panel-label">How we value it</div>
+      <p>One method for Base, Target and Stretch at every milestone. Year 3 and Year 5 value is the average of 8&times; that year&rsquo;s EBITDA and 2.5&times; that year&rsquo;s revenue. Today&rsquo;s fair value is the Year 5 value discounted back five years at 25% a year. The seed price is the Base fair value less a 20% seed discount.</p>
+    </div>
+
+    <div class="val-footnote reveal">Forward-looking projections from the House of Longevity financial model (v20), not a guarantee of future results or financial advice. Values are enterprise values and exclude net cash. Multiples are measured against the $25.6m seed post-money and are shown before dilution from future funding rounds and from ambassador, advisor or employee equity. Revenue includes product sold at full RRP, part of which is passed through to the compounding pharmacy.</div>
   </div>
 </section>
 
@@ -1082,7 +1119,7 @@ document.addEventListener('DOMContentLoaded', function(){
 (function(){
   // Approved partner list. Case-insensitive, trimmed match on first name.
   // Add new approved names here as the target list grows.
-  var APPROVED = ['hol'];
+  var APPROVED = ['hol','hl'];
 
   var gate = document.getElementById('gate');
   var input = document.getElementById('gate-input');
