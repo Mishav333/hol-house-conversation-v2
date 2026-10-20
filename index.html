@@ -839,6 +839,29 @@ img{ display:block; max-width:100%; }
   .seed-term:first-child{border-top:none}
   .val-three-col{grid-template-columns:1fr;gap:56px}
 }
+
+/* ============ built band: the ledger (partner-approved Option C, Oct 2026) ============ */
+.built-band{ min-height: 880px; }
+.built-copy{ padding: 80px 88px; }
+.ledger{ margin-top: 8px; }
+.lg-row{ display: grid; grid-template-columns: 200px 1fr 96px; align-items: center; gap: 20px; padding: 18px 0; border-bottom: 1px solid rgba(34,30,25,.14); }
+.lg-k{ font-family: 'Archivo', sans-serif; font-size: 14px; font-weight: 600; color: var(--charcoal); }
+.lg-bar{ height: 8px; background: rgba(34,30,25,.07); }
+.lg-bar span{ display: block; height: 100%; background: var(--gold-thread); }
+.lg-bar span.full{ background: var(--charcoal); opacity: .85; }
+.lg-v{ font-size: 34px; line-height: 1; text-align: right; color: var(--charcoal); }
+.lg-note{ margin-top: 12px; font-family: 'Archivo', sans-serif; font-size: 13px; line-height: 1.5; color: var(--charcoal); opacity: .62; }
+.lg-sub{ display: block; margin-top: 40px; color: var(--gold-deep); }
+.pships{ display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 16px; }
+.lg-num{ font-size: 40px; line-height: 1; color: var(--charcoal); }
+.lg-cap{ margin-top: 10px; font-family: 'Archivo', sans-serif; font-size: 13.5px; line-height: 1.5; color: var(--charcoal); opacity: .66; }
+.lg-coda{ margin-top: 32px; padding-left: 20px; border-left: 2px solid var(--gold-thread); font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 18px; line-height: 1.35; color: var(--charcoal); }
+@media (max-width: 980px){
+  .built-copy{ padding: 72px 28px; }
+  .pships{ grid-template-columns: 1fr; gap: 22px; }
+  .lg-row{ grid-template-columns: 1fr 80px; }
+  .lg-bar{ grid-column: 1 / -1; order: 3; }
+}
 </style>
 </head>
 <body>
@@ -923,25 +946,18 @@ img{ display:block; max-width:100%; }
   </div>
   <div class="built-copy">
     <div class="label ed-label reveal">What We Have Already Built</div>
-    <h2 class="serif-display ed-heading reveal reveal-delay-1">The operating foundation is already in motion.</h2>
-    <div class="built-list">
-      <div class="built-item reveal reveal-delay-1">
-        <span class="n">01</span>
-        <p>A reach network of <strong>53,995 workers</strong> across 166 screens and 60 sites.</p>
-      </div>
-      <div class="built-item reveal reveal-delay-2">
-        <span class="n">02</span>
-        <p>A PR partner in <strong>MADCO</strong>, securing standing relationships with health and business media.</p>
-      </div>
-      <div class="built-item reveal reveal-delay-2">
-        <span class="n">03</span>
-        <p>A growing <strong>creator layer</strong> across fitness, maternal health, corporate wellness and longevity.</p>
-      </div>
-      <div class="built-item reveal reveal-delay-3">
-        <span class="n">04</span>
-        <p>A recognised <strong>medical advisory board</strong>. You are joining an ecosystem already in motion.</p>
-      </div>
+    <h2 class="serif-display ed-heading reveal reveal-delay-1">Close to half a million of work, for $50k in cash.</h2>
+    <div class="ledger reveal reveal-delay-1">
+      <div class="lg-row"><div class="lg-k">Cash spent to date</div><div class="lg-bar"><span style="width:10.6%"></span></div><div class="lg-v serif-display">$50k</div></div>
+      <div class="lg-row"><div class="lg-k">Cost to buy the same work in</div><div class="lg-bar"><span class="full" style="width:100%"></span></div><div class="lg-v serif-display">~$470k</div></div>
+      <div class="lg-note">Brand, strategy, financial model, decks and creative, priced at top Australian firm rates. Advisors, AI tools and company set-up make up the cash.</div>
     </div>
+    <div class="label lg-sub reveal reveal-delay-2">Partnerships, paid from revenue, no upfront cash</div>
+    <div class="pships reveal reveal-delay-2">
+      <div><div class="lg-num serif-display">$2m</div><div class="lg-cap">Mine-site media, 12 months. 53,995 workers, 166 screens, 60 sites.</div></div>
+      <div><div class="lg-num serif-display">$250k</div><div class="lg-cap">MADCO PR retainer, 12 months, across health and business media.</div></div>
+    </div>
+    <p class="lg-coda reveal reveal-delay-3">Plus a growing creator layer, a recognised medical advisory board, and hands-on advice from the Head of Operations at Eucalyptus. You are joining an ecosystem already in motion.</p>
   </div>
 </section>
 
